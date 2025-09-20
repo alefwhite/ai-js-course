@@ -1,4 +1,4 @@
-import { loadEnvironment, displayResult } from "./utils/helpers";
+import { loadEnvironment } from "./utils/helpers";
 
 // Carrega as variáveis de ambiente
 loadEnvironment();
