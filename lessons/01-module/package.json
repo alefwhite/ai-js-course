@@ -8,6 +8,7 @@
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
     "watch": "nodemon --exec ts-node src/index.ts",
+    "hello-gh-langchain": "ts-node src/examples/1-text-generation/test-gemini-with-langchain.ts",
     "hello-gh": "ts-node src/examples/1-text-generation/test-gh-models.ts",
     "hello-gemini": "ts-node src/examples/1-text-generation/test-gemini.ts"
   },
@@ -22,6 +23,10 @@
   "license": "MIT",
   "dependencies": {
     "@google/genai": "^1.20.0",
+    "@langchain/community": "^0.3.56",
+    "@langchain/core": "^0.3.77",
+    "@langchain/google-genai": "^0.2.18",
+    "@upstash/redis": "^1.35.4",
     "dotenv": "^17.2.2",
     "openai": "^5.21.0"
   },

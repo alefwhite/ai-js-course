@@ -34,3 +34,14 @@ export function getEndpoint(endpointName: string): string {
   }
   return endpoint;
 }
+
+export function getUpstashKeys(): { url: string; token: string } {
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!url || !token) {
+    throw new Error(
+      `UPSTASH_REDIS_REST_URL ou UPSTASH_REDIS_REST_TOKEN não encontrados nas variáveis de ambiente. Por favor, configure no arquivo .env`
+    );
+  }
+  return { url, token };
+}
